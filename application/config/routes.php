@@ -52,3 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+$route['about'] = 'welcome/demo';
+$route['test/(:any)'] = 'welcome/test/$1';
+$route['test1/(:num)'] = 'welcome/test/$1'; //obligatoiremet variable est intier
+
