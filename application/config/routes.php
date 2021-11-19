@@ -55,4 +55,5 @@ $route['translate_uri_dashes'] = FALSE;
 $route['about'] = 'welcome/demo';
 $route['test/(:any)'] = 'welcome/test/$1';
 $route['test1/(:num)'] = 'welcome/test/$1'; //obligatoiremet variable est intier
+$route['PageController']='PageController/index';
 
