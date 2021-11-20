@@ -58,3 +58,6 @@ $route['test1/(:num)'] = 'welcome/test/$1'; //obligatoiremet variable est intier
 $route['PageController']='PageController/index';
 $route['demo']='PageController/demo';
 
+// Employees routes
+$route['Employee']='Frontend/EmployeeController/index';
+$route['Employee/Add']='Frontend/EmployeeController/create';
