@@ -15,21 +15,23 @@
                                    <td>First Name</td>
                                    <td>Last Name</td>
                                    <td>Phone Number</td>
-                                   <td>Email_Id</td>  
+                                   <td>Email_Id</td>
                                    <td>Edit</td>
                                    <td>Delete</td>                                         
                                    </tr>
                                </thead>
                                <tbody>
+                                <?php foreach($Employee as $result): ?>
                                    <tr>
-                                   <td>12</td>
-                                   <td>ANass</td>
-                                   <td>Raissi</td>
-                                   <td>+212633110420</td>
-                                   <td>asas@asas</td>
-                                <td><a href="" class="btn btn-success">Edit</td></a>
-                                <td><a href="" class="btn btn-danger">Delete</td</a>
+                                   <td><?= $result->id;?></td>
+                                   <td><?= $result->firstname;?></td>
+                                   <td><?= $result->Lastname;?></td>
+                                   <td><?= $result->phonenumber;?>+</td>
+                                   <td><?= $result->Email;?></td>
+                                     <td><a href="" class="btn btn-success">Edit</td></a>
+                                     <td><a href="" class="btn btn-danger">Delete</td</a>
                                    </tr>
+                                   <?php endforeach;?>
                                </tbody>
                            </table>
                      </div>
