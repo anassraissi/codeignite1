@@ -62,3 +62,5 @@ $route['demo']='PageController/demo';
 $route['Employee']='Frontend/EmployeeController/index';
 $route['Employee/Add']='Frontend/EmployeeController/create';
 $route['Employee/store']='Frontend/EmployeeController/store';
+$route['Employee/edit/(:any)']='Frontend/EmployeeController/edit/$1';
+$route['Employee/update/(:any)']='Frontend/EmployeeController/update/$1';

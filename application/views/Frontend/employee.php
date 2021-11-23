@@ -28,7 +28,7 @@
                                    <td><?= $result->Lastname;?></td>
                                    <td><?= $result->phonenumber;?>+</td>
                                    <td><?= $result->Email;?></td>
-                                     <td><a href="" class="btn btn-success">Edit</td></a>
+                                     <td><a href="<?php echo base_url('Employee/edit/'.$result->id);?>" class="btn btn-success">Edit</td></a>
                                      <td><a href="" class="btn btn-danger">Delete</td</a>
                                    </tr>
                                    <?php endforeach;?>
