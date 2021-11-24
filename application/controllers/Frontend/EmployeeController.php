@@ -37,6 +37,7 @@ class EmployeeController extends CI_Controller
                 ];          
                 $this->load->model('EmployeeModel');
                 $this->EmployeeModel->insert($data);
+                $this->session->set_flashdata('status', 'you created successfuly');
                 $this->index();
              }
             // 
@@ -63,6 +64,7 @@ class EmployeeController extends CI_Controller
             ];
             $this->load->model('EmployeeModel');
             $this->EmployeeModel->EmployeeUpdate($data,$id);
+            $this->session->set_flashdata('status', 'you updated successfuly');
              redirect(base_url('Employee'));
         
         else:
@@ -73,6 +75,7 @@ class EmployeeController extends CI_Controller
          public function delete($id){
                $this->load->model('EmployeeModel');
                $this->EmployeeModel->EmployeeDelete($id);
+               $this->session->set_flashdata('status', 'you deleted successfuly');
                redirect(base_url('Employee'));
               
          }

@@ -3,8 +3,13 @@
      <div class="container">
          <div class="row">
              <div class="col-md-12 mt-4">
-                 <div class="card">
+                 <div class="card">       
                      <div class="card-header">
+                     <?php if($this->session->flashdata('status')): ?>
+                     <div class="alert alert-success" role="alert">
+                     <?=$this->session->flashdata('status');?>
+                      </div> 
+                      <?php endif ?>
                            How to insert data into database <a href="<?php echo base_url ('Employee/Add')?>" class="btn btn-primary float-right">Add Employee</a>
                      </div>
                      <div class="card-body">
