@@ -68,8 +68,13 @@ class EmployeeController extends CI_Controller
         else:
                   $this->edit($id);
         endif;
-            
 
+         }
+         public function delete($id){
+               $this->load->model('EmployeeModel');
+               $this->EmployeeModel->EmployeeDelete($id);
+               redirect(base_url('Employee'));
+              
          }
       
 
@@ -81,4 +86,3 @@ class EmployeeController extends CI_Controller
      }
 
   
-

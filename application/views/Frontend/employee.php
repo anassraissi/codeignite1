@@ -17,7 +17,8 @@
                                    <td>Phone Number</td>
                                    <td>Email_Id</td>
                                    <td>Edit</td>
-                                   <td>Delete</td>                                         
+                                   <td>Delete</td>
+                                   <td>Confirm Delete</td>                                         
                                    </tr>
                                </thead>
                                <tbody>
@@ -29,8 +30,9 @@
                                    <td><?= $result->phonenumber;?>+</td>
                                    <td><?= $result->Email;?></td>
                                      <td><a href="<?php echo base_url('Employee/edit/'.$result->id);?>" class="btn btn-success">Edit</td></a>
-                                     <td><a href="" class="btn btn-danger">Delete</td</a>
-                                   </tr>
+                                     <td><a href="<?php echo base_url('Employee/delete/'.$result->id);?>" class="btn btn-danger">Delete</td</a>
+                                      <td><button type="submit" class="btn btn-danger confirm-delete" value="<?=$result->id; ?>">Confirm Delete</button></td>
+                                    </tr>
                                    <?php endforeach;?>
                                </tbody>
                            </table>
