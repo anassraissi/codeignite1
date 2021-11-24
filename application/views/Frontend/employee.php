@@ -8,7 +8,7 @@
                            How to insert data into database <a href="<?php echo base_url ('Employee/Add')?>" class="btn btn-primary float-right">Add Employee</a>
                      </div>
                      <div class="card-body">
-                           <table class="table table-bordered">
+                           <table id="myTable" class="table table-bordered">
                                <thead>
                                    <tr>
                                    <td>ID</td>

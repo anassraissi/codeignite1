@@ -6,6 +6,13 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
 	integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous">
 </script>
+<script src="//cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
+<script>
+		$(document).ready( function () {
+    $('#myTable').DataTable();
+} );
+</script>
 <script>
 	$(document).ready(function () {
 		$('.confirm-delete').click(function (e) {
@@ -15,7 +22,7 @@
 				var id = $(this).val();
 				$.ajax({
 					type: "DELETE",
-					url: 'Employee/ConfirmDelete/'+id,
+					url: 'Employee/ConfirmDelete/' + id,
 					success: function (response) {
 						alert("Data deleted successfully");
 						window.location.reload();
