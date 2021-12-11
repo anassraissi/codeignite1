@@ -15,4 +15,15 @@ class PageController extends CI_Controller
          $data['body']="and is so open to intresting thing";
          $this->load->view('DemoPage',$data);
     }
+    public function userpage(){
+        $this->load->model('Authentification');
+        $this->load->view('template/header');
+        $this->load->view('template/footer');
+        $this->load->view('userpage');
+    }
+    public function adminpage(){
+        $this->load->view('template/header');
+        $this->load->view('template/footer');
+        $this->load->view('adminpage');
+    }
 }

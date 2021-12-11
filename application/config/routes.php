@@ -68,3 +68,10 @@ $route['Employee/delete/(:any)']='Frontend/EmployeeController/delete/$1';
 $route['Employee/ConfirmDelete/(:any)']['DELETE']='Frontend/EmployeeController/delete/$1';
 $route['register']['GET']='Auth/RegisterController/index';
 $route['register']['POST']='Auth/RegisterController/register';
+$route['login']['GET']='Auth/LoginController/index';
+$route['login']['POST']='Auth/LoginController/login';
+$route['userpage']['GET']='UserController/userpage';
+$route['adminpage']['GET']='PageController/adminpage';
+
+
+

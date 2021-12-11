@@ -9,6 +9,11 @@ class RegisterController extends CI_Controller {
     //     $this->load->library('form_validation');
     //     //Do your magic here
     // }
+    // public function __construct()
+    // {
+    //    parent::__construct();
+    //    $this->load->library('form_validation');
+    // }
     
        
     public function index(){
@@ -18,6 +23,7 @@ class RegisterController extends CI_Controller {
         
     }
     public function register(){
+      
 
       $this->form_validation->set_rules('first_name', 'first_name', 'required');
       $this->form_validation->set_rules('last_name', 'last_name', 'required');
@@ -33,12 +39,15 @@ class RegisterController extends CI_Controller {
       $this->load->model('UserModel');
       $this->UserModel->Registeruser($data);
       $this->session->set_flashdata('status', 'you registred successfully');
-        $this->index();
-        else :
+       
+      
+               else :
           $this->session->set_flashdata('status', 'you registred failled');
           $this->index();
 
         endif;
+        
+       
 
               } 
       }
