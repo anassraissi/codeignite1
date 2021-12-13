@@ -22,11 +22,13 @@
         <a class="nav-link" href="<?php echo base_url('login')?>">Login</a>
       </li>
       <?php }?>
+      <?php if($this->session->has_userdata('Authentificated'))?>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <?php echo $this->session->userdata('auth_user')['first_name'];?><?php echo $this->session->userdata('auth_user')['last_name'];?></a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Log Out</a>
+        <?php ?>
+          <a class="dropdown-item" href="<?php echo base_url('logout')?>">Log Out</a>
         
          
         </div>

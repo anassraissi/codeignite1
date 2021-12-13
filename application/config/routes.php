@@ -72,6 +72,10 @@ $route['login']['GET']='Auth/LoginController/index';
 $route['login']['POST']='Auth/LoginController/login';
 $route['userpage']['GET']='UserController/userpage';
 $route['adminpage']['GET']='PageController/adminpage';
+$route['logout']['GET']='Auth/LogoutController/logout';
+$route['403']='PageController/AccessDeneid';
+
+
 
 
 

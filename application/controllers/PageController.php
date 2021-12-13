@@ -2,6 +2,19 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 class PageController extends CI_Controller 
 {
+    
+    public function __construct()
+    {
+        parent::__construct();
+         $this->load->model('Authentification');
+         $this->Authentification->CheckIsAdmin();
+    }
+    
+    public function AccessDeneid(){
+        $this->load->view('template/header');
+        $this->load->view('errors/403');
+        $this->load->view('template/footer'); 
+    }
     public function index(){
         echo "hi anass you've understoud how work Controller";
     }

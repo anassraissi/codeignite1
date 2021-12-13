@@ -41,7 +41,7 @@ class LoginController extends CI_Controller {
                 ];
                
                   
-                $this->session->set_userdata('Authentificated','1');
+                $this->session->set_userdata('Authentificated',$result->as_role);
                 $this->session->set_userdata('auth_user',$auth_userdetails);              
                $this->session->set_flashdata('status', 'you logged in');
                 redirect(base_url('userpage'));
